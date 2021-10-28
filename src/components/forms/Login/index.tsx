@@ -15,13 +15,12 @@ const Login = () => {
 
   const handleSubmit = async (e: FormEvent<HTMLElement>) => {
     e.preventDefault();
-
     try {
       const response = await login(inputs);
       localStorage.setItem("user", JSON.stringify(response));
       push("/");
     } catch (e) {
-      setAlert(e.message);
+      setAlert("message");
     }
   };
 
@@ -29,11 +28,7 @@ const Login = () => {
     <form action="" onSubmit={handleSubmit}>
       <div>
         <label htmlFor="">Email</label>
-        <input
-          type="email"
-          value={inputs.email}
-          onChange={(e) => setInputs({ ...inputs, email: e.target.value })}
-        />
+        <input type="email" value={inputs.email} onChange={(e) => setInputs({ ...inputs, email: e.target.value })}/>
       </div>
       <div>
         <label htmlFor="">Contraseña</label>
@@ -47,7 +42,8 @@ const Login = () => {
       <button type="submit">Iniciar sesión</button>
       {alert}
     </form>
+
   );
 };
 
-export { Login };
+export { Login }

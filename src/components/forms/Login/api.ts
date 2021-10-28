@@ -25,7 +25,8 @@ const login = async (payload: Payload) => {
     }
     /* / Tarea de backend */
   } catch (e) {
-    throw new Error(e.message);
+    throw new Error("Error en la petición");
+    /*Acá deberia estar devolviendo el e.message*/
   }
 };
 
