@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { Categories, JobOffers, Login, Profile, SignUp, Users } from './page';
+import { AddJobOffer, Categories, JobOffers, Login, Profile, SignUp, Users } from './page';
 
 
 const App = () => {
@@ -11,6 +11,7 @@ const App = () => {
     <Route path="/categories" component={Categories} />
     <Route path="/profile" component={Profile} />
     <Route path="/users" component={Users} />
+    <Route path="/add-job-offer" component={AddJobOffer} />
     <Route path="/" component={JobOffers} />
   </Switch>
 </Router>

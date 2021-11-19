@@ -5,6 +5,8 @@ import { getJobOffers } from "./api";
 const JobOffers = () => {
   const [offers, setOffers] = useState<JobOffer[]>();
 
+  /** useEffect(() => {} , []) Hook que recibe un callback y un array */
+
   useEffect(() => {
     getJobOffers().then((response) => {
       setOffers(response);
